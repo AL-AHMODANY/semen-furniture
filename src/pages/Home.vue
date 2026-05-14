@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import BrandsSection from "../components/brands/BrandsSection.vue";
 import { shopStore } from "../store/shop.js";
+import Swal from "sweetalert2";
 
 import heroMain from "../assets/images/image 001.jpg";
 import heroSideTop from "../assets/images/image006.jpg";
@@ -200,7 +201,6 @@ const posts = [
 
 const currentSlide = ref(0);
 const hoveredProduct = ref(null);
-const toast = ref("");
 const countdowns = ref([
   { days: "365", hours: "24", mins: "59", secs: "28" },
   { days: "365", hours: "24", mins: "59", secs: "28" },
@@ -217,7 +217,6 @@ const sofaRows = computed(() => {
 
 let slideTimer;
 let countdownTimer;
-let toastTimer;
 
 function nextSlide() {
   currentSlide.value = (currentSlide.value + 1) % heroSlides.length;
@@ -248,11 +247,17 @@ function tickCountdown(item) {
 }
 
 function showToast(message) {
-  toast.value = message;
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => {
-    toast.value = "";
-  }, 2200);
+  Swal.fire({
+    title: "Success!",
+    text: message,
+    icon: "success",
+    timer: 2000,
+    showConfirmButton: false,
+    position: "top-end",
+    toast: true,
+    background: "#fff",
+    color: "#333",
+  });
 }
 
 function addToCart(product) {
@@ -302,7 +307,6 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(slideTimer);
   clearInterval(countdownTimer);
-  clearTimeout(toastTimer);
 });
 </script>
 
@@ -1129,15 +1133,6 @@ onUnmounted(() => {
     </section>
 
     <BrandsSection />
-
-    <Transition name="toast">
-      <div
-        v-if="toast"
-        class="fixed bottom-6 right-6 z-60 bg-[#222] px-5 py-3 text-[13px] font-semibold text-white shadow-xl"
-      >
-        {{ toast }}
-      </div>
-    </Transition>
   </main>
 </template>
 
