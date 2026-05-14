@@ -1,35 +1,48 @@
 <script setup>
-import UIButton from '../ui/UIButton.vue'
-import stoolImg from '../../assets/images/image033.jpg'
+import UIButton from "../ui/UIButton.vue";
+import stoolImg from "../../assets/images/image014.jpg";
 </script>
 
 <template>
-  <section class="w-full bg-[#f0ede8] border-t border-b border-[#e0dbd2]">
-    <div class="section-inner">
-      <div class="flex flex-col md:flex-row items-center gap-8 py-12">
-
-        <!-- Image -->
-        <div class="flex-1 flex items-center justify-center">
-          <img :src="stoolImg" alt="Axel Stool"
-               class="max-h-[260px] w-auto object-contain drop-shadow-lg" />
+  <section class="w-full bg-[#f3f0ea] border-y border-[#e5dfd5]">
+    <div class="max-w-350 mx-auto px-6">
+      <div
+        class="flex flex-col md:flex-row items-center justify-between py-13.75 md:py-17.5 gap-10 md:gap-14"
+      >
+        <div class="w-full md:w-[62%] flex justify-center">
+          <img
+            :src="stoolImg"
+            alt="Axel Stool"
+            class="w-full max-w-125 md:max-w-170 object-contain"
+          />
         </div>
 
-        <!-- Text -->
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-[11px] font-bold text-[#c0392b] uppercase tracking-[0.3em] mb-3">
+        <div class="w-full md:w-[38%] max-w-107.5">
+          <p
+            class="uppercase text-[9px] tracking-[0.35em] font-bold text-[#c44b3b] mb-3"
+          >
             New Product
           </p>
-          <h2 class="font-black uppercase leading-none text-[#1a1a1a] mb-4 tracking-tight"
-              style="font-size:clamp(32px,4vw,50px);">
-            Axel –<br />Stool
-          </h2>
-          <p class="text-[13px] text-[#777] leading-relaxed mb-7 max-w-[340px] mx-auto md:mx-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <UIButton variant="dark" text="Buy Now" size="lg" />
-        </div>
 
+          <h2
+            class="uppercase font-black text-[#1f1f1f] leading-[0.9] tracking-[-1px] text-[42px] md:text-[58px] mb-4"
+          >
+            AXEL -<br />
+            STOOL
+          </h2>
+
+          <p class="text-[#7a7a7a] text-[12px] leading-[1.9] mb-6 max-w-80">
+            Lorem ipsum has been the industry standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+
+          <UIButton
+            variant="dark"
+            text="BUY NOW"
+            class="bg-[#222]! hover:bg-black! px-7! py-3! text-[11px]! font-bold! tracking-wide"
+          />
+        </div>
       </div>
     </div>
   </section>

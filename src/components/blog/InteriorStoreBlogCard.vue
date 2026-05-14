@@ -1,15 +1,15 @@
 <script setup>
-import blogImg from '../../assets/images/image033.jpg'
+import blogImg from '../../assets/images/image036.jpg'
 </script>
 
 <template>
   <article class="group cursor-pointer">
     <div class="overflow-hidden mb-4">
       <img :src="blogImg" alt="Interior Store Blog"
-        class="w-full h-[220px] object-cover transition-transform duration-300 group-hover:scale-105" />
+        class="w-full h-55 object-cover transition-transform duration-300 group-hover:scale-105" />
     </div>
     <div class="flex items-start gap-4 mb-2">
-      <div class="flex-shrink-0 text-center">
+      <div class="shrink-0 text-center">
         <span class="block text-[22px] font-black text-[#222] leading-none">05</span>
         <span class="block text-[10px] font-bold uppercase text-[#888] tracking-wider">JAN</span>
       </div>
@@ -20,7 +20,7 @@ import blogImg from '../../assets/images/image033.jpg'
         </h3>
       </div>
     </div>
-    <p class="text-[12px] text-[#888] leading-relaxed pl-[52px]">
+    <p class="text-[12px] text-[#888] leading-relaxed pl-13">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
     </p>
   </article>

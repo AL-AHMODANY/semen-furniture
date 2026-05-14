@@ -1,14 +1,20 @@
 <script setup>
+defineEmits(["click"]);
+
 defineProps({
   icon: { type: String, required: true },
   label: { type: String, default: "" },
+  active: { type: Boolean, default: false },
 });
 </script>
 
 <template>
   <button
     :title="label"
-    class="flex-1 h-[40px] flex items-center justify-center border-r border-[#e8e8e8] last:border-r-0 text-[#888] hover:text-[#c0392b] hover:bg-[#fafafa] transition-all duration-200 cursor-pointer group"
+    :class="[
+      'flex-1 h-[40px] flex items-center justify-center border-r border-[#e8e8e8] last:border-r-0 transition-all duration-200 cursor-pointer group',
+      active ? 'text-[#c0392b] bg-[#fff5f4]' : 'text-[#888] hover:text-[#c0392b] hover:bg-[#fafafa]'
+    ]"
   >
     <!-- Heart / Wishlist -->
     <svg

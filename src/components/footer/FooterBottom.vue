@@ -46,7 +46,7 @@ const payments = [
 <template>
   <div class="bg-[#f5f4f0] border-t border-[#e8e8e8] py-5">
     <div
-      class="max-w-[1200px] mx-auto px-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+      class="site-shell flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
     >
       <!-- Left: copyright -->
       <div class="space-y-1">

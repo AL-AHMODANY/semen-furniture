@@ -72,7 +72,7 @@ const linkColumns = [
 
 <template>
   <div class="bg-[#f5f4f0] border-t-2 border-[#e8e8e8] pt-16 pb-12">
-    <div class="max-w-[1200px] mx-auto px-5">
+    <div class="site-shell">
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10"
       >

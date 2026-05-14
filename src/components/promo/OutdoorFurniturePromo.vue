@@ -1,11 +1,11 @@
 <script setup>
 // image03.jpg = OUTDOOR FURNITURE "Free delivery on weekend" banner (pre-made)
-import bgImg from '../../assets/images/image03.jpg'
+import bgImg from '../../assets/images/image030.jpg'
 </script>
 
 <template>
-  <div class="relative overflow-hidden min-h-[260px] group cursor-pointer">
+  <div class="relative overflow-hidden min-h-65 group cursor-pointer">
     <img :src="bgImg" alt="Outdoor Furniture"
-      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 min-h-[260px]" />
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 min-h-65" />
   </div>
 </template>

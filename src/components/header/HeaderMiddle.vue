@@ -26,7 +26,7 @@ const features = [
 
 <template>
   <div class="bg-white border-b border-[#e8e8e8]">
-    <div class="max-w-[1200px] mx-auto px-5 flex items-center justify-between py-5">
+    <div class="site-shell flex items-center justify-between py-5">
 
       <!-- LOGO -->
       <a

@@ -5,6 +5,7 @@ import imgBlueOfficeChair from "../../assets/images/image006.jpg";
 import imgWoodenChair from "../../assets/images/image007.jpg";
 import imgBrownDesk from "../../assets/images/image008.jpg";
 import imgClassicWoodChair from "../../assets/images/image009.jpg";
+import imgAccentChair from "../../assets/images/image011.jpg";
 import imgLeatherSofa from "../../assets/images/image010.jpg";
 import imgBlueModernSofa from "../../assets/images/image012.jpg";
 import imgBlackStool from "../../assets/images/image013.jpg";
@@ -55,6 +56,14 @@ const products = [
     oldPrice: "$ 200.00",
   },
   {
+    title: "Accent Chair",
+    img: imgAccentChair,
+    bgColor: "bg-[#f6f0ea]",
+    showNew: false,
+    showSale: false,
+    price: "$ 219.00",
+  },
+  {
     title: "Leather Sofa",
     img: imgLeatherSofa,
     bgColor: "bg-[#f5f0e8]",
@@ -92,8 +101,7 @@ const products = [
 </script>
 
 <template>
-  <!-- Premium grid: 4 → 2 → 1 columns (responsive) with uniform gaps -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+  <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5">
     <ProductCard
       v-for="product in products"
       :key="product.title"

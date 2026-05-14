@@ -6,67 +6,72 @@ import livingRoomImg from "../../assets/images/image002.jpg";
 </script>
 
 <template>
-  <!--
-    4-panel hero — exactly like Simen demo:
-    ┌──────────────────────┬──────────────────────┐
-    │                      │  Living room photo   │
-    │   Main hero slider   ├──────────┬───────────┤
-    │   (spans 2 rows)     │  Sofa    │  Chair    │
-    └──────────────────────┴──────────┴───────────┘
-  -->
-  <section class="w-full overflow-hidden bg-white">
-    <!-- Desktop 4-panel grid -->
+  <section class="w-full bg-white py-4 md:py-5">
+    <div class="site-shell">
+    <!-- DESKTOP -->
     <div
-      class="hidden md:grid"
-      style="grid-template-columns: 55% 45%; grid-template-rows: 300px 220px"
+      class="hidden md:grid gap-3"
+      style="
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 320px 220px;
+      "
     >
-      <!-- LEFT — slider, spans both rows -->
+      <!-- LEFT -->
       <div
-        style="grid-row: 1/3; grid-column: 1"
-        class="border-r border-[#e8e8e8] overflow-hidden"
+        class="overflow-hidden bg-white"
+        style="grid-row: 1 / 3"
       >
         <MainHeroBanner />
       </div>
 
-      <!-- RIGHT TOP — living room scene -->
-      <div
-        style="grid-row: 1; grid-column: 2"
-        class="border-b border-[#e8e8e8] overflow-hidden group cursor-pointer"
-      >
+      <!-- RIGHT TOP -->
+      <div class="overflow-hidden bg-white group cursor-pointer">
         <img
           :src="livingRoomImg"
           alt="Living Room"
-          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
-      <!-- RIGHT BOTTOM — two equal panels -->
-      <div style="grid-row: 2; grid-column: 2" class="grid grid-cols-2">
-        <div class="border-r border-[#e8e8e8] h-full overflow-hidden">
+        <!-- RIGHT BOTTOM -->
+        <div class="grid grid-cols-2 gap-3">
+        <div class="overflow-hidden bg-white">
           <SofaPromoBanner />
         </div>
-        <div class="h-full overflow-hidden">
+
+        <div class="overflow-hidden bg-white">
           <ChairDiscountBanner />
         </div>
       </div>
     </div>
 
-    <!-- Mobile — stack vertically -->
-    <div class="md:hidden flex flex-col">
-      <div class="h-[260px]"><MainHeroBanner /></div>
-      <div class="h-[180px] border-t border-[#e8e8e8] overflow-hidden">
+    <!-- MOBILE -->
+    <div class="flex flex-col gap-3 md:hidden">
+      <!-- HERO -->
+      <div class="h-60 overflow-hidden bg-white">
+        <MainHeroBanner />
+      </div>
+
+      <!-- IMAGE -->
+      <div class="h-42.5 overflow-hidden bg-white">
         <img
           :src="livingRoomImg"
           alt="Living Room"
-          class="w-full h-full object-cover object-center"
+          class="w-full h-full object-cover"
         />
       </div>
-      <div class="grid grid-cols-2 h-[160px] border-t border-[#e8e8e8]">
-        <div class="border-r border-[#e8e8e8] overflow-hidden">
+
+      <!-- BOTTOM -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="h-37.5 overflow-hidden bg-white">
           <SofaPromoBanner />
         </div>
-        <div class="overflow-hidden"><ChairDiscountBanner /></div>
+
+        <div class="h-37.5 overflow-hidden bg-white">
+          <ChairDiscountBanner />
+        </div>
       </div>
+    </div>
     </div>
   </section>
 </template>
